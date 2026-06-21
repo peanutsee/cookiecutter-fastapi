@@ -1,0 +1,9 @@
+{
+  "project_name": "My FastAPI Project",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "project_description": "A FastAPI backend",
+  "author_name": "Your Name",
+  "author_email": "you@example.com",
+  "python_version": "3.12",
+  "project_version": "0.1.0"
+}
