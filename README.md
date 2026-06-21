@@ -18,7 +18,7 @@ pip install cookiecutter
 ### Generate a project
 
 ```bash
-cookiecutter gh:YOUR_USERNAME/fastapi-project-structure
+cookiecutter gh:YOUR_USERNAME/cookiecutter-fastapi
 ```
 
 Cookiecutter will prompt for values defined in `cookiecutter.json` (project name, slug, Python version, initial version, and so on). It then writes a new directory on disk — your generated app is ready to develop in.
@@ -26,7 +26,7 @@ Cookiecutter will prompt for values defined in `cookiecutter.json` (project name
 To pin a specific **template** release when generating:
 
 ```bash
-cookiecutter gh:YOUR_USERNAME/fastapi-project-structure --checkout v1.0.0
+cookiecutter gh:YOUR_USERNAME/cookiecutter-fastapi --checkout v1.0.0
 ```
 
 ### Run the generated project
@@ -194,7 +194,7 @@ DATABASE_URL: str = "sqlite+aiosqlite:///./app.db"
 2. Test locally without pushing:
 
    ```bash
-   cookiecutter /path/to/fastapi-project-structure --no-input
+   cookiecutter /path/to/cookiecutter-fastapi --no-input
    ```
 
 3. Tag a release (see versioning below).
@@ -217,7 +217,7 @@ The version of the Cookiecutter template itself. Users choose which template gen
 - Users generate from a specific tag:
 
   ```bash
-  cookiecutter gh:YOUR_USERNAME/fastapi-project-structure --checkout v1.0.0
+  cookiecutter gh:YOUR_USERNAME/cookiecutter-fastapi --checkout v1.0.0
   ```
 
 The template's own version can live in `pyproject.toml` at the template root (for your tooling) or simply in git tags — it does **not** need to match generated project versions.
@@ -281,7 +281,7 @@ This adds prompt fatigue; prefer pinning in the template and bumping on template
 ### Template repo layout
 
 ```
-fastapi-project-structure/          ← template repo root
+cookiecutter-fastapi/          ← template repo root
 ├── cookiecutter.json               # prompts & default values
 ├── README.md                       # this file (template docs)
 └── {{cookiecutter.project_slug}}/  # everything that gets copied
